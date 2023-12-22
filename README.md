@@ -1,5 +1,7 @@
 # Graph-Theory
 
+## Group Member
+
 | NRP        | Name                        |
 | ---------- | --------------------------- |
 | 5025211050 | Rule Lulu Damara            |
