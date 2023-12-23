@@ -3,6 +3,7 @@ class SegmentTree:
         self.size = size
         self.tree = [0] * (2 * size)
 
+    # memperbarui nilai pada indeks tertentu dalam segment tree.
     def update_value(self, index, value):
         index += self.size
         self.tree[index] = value
@@ -11,6 +12,7 @@ class SegmentTree:
             index //= 2
             self.tree[index] = max(self.tree[2 * index], self.tree[2 * index + 1])
 
+    # melakukan query pada rentang tertentu yang ada dalam array segment tree.
     def query(self, left, right):
         left += self.size
         right += self.size
@@ -44,7 +46,7 @@ def longest_increasing_subsequence_length(nums):
 
     return max(lis_lengths)
 
-
+# Menggunakan array nums sebagai input untuk fungsi dan mencetak panjang LIS yang dihitung.
 nums = [4, 1, 13, 7, 0, 2, 8, 11, 3] 
 result = longest_increasing_subsequence_length(nums)
 print("Panjang Largest Monotonically Increasing Subsequence :", result)
